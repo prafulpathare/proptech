@@ -5,7 +5,7 @@ import * as SplashScreen from 'expo-splash-screen';
 
 SplashScreen.preventAutoHideAsync();
 
-export default function Home() {
+export default function Home({ navigation }) {
 
     const [tagId, setTagId] = useState(houseTypes[0].id);
 
@@ -108,7 +108,7 @@ export default function Home() {
                 horizontal={true}
                 data={properties}
                 renderItem={({ item, index, separators }) => (
-                    <View style={{
+                    <TouchableOpacity style={{
                         width: 250,
                         height: 250,
                         borderRadius: 30,
@@ -116,7 +116,7 @@ export default function Home() {
                         marginRight: 20,
                         elevation: 10,
                         marginLeft: index == 0 ? 20 : 0
-                    }} >
+                    }} onPress={() =>         navigation.navigate('Room', { room: item, properties: properties }) } >
                         <Image
                             source={{ uri: item.image }} style={{
                                 width: 250,
@@ -146,14 +146,14 @@ export default function Home() {
                             width: 100,
                             backgroundColor: '#0009',
                             color: '#fff',
-                            fontFamily: 'DM sans',
+                            fontFamily: 'DM Sans',
                             fontSize: 12,
                             borderRadius: 10,
                             padding: 7
                         }}>
                             {formatCurrency(item.rent)} / month
                         </Text>
-                    </View>
+                    </TouchableOpacity>
                 )}
             />
 
@@ -243,11 +243,11 @@ const styles = StyleSheet.create({
 
 const houseTypes = [
     {
-        id: 839,
+        id: 82,
         label: 'Home'
     },
     {
-        id: 345,
+        id: 93,
         label: 'Office'
     },
     {
@@ -255,7 +255,7 @@ const houseTypes = [
         label: 'Apartment'
     },
     {
-        id: 985,
+        id: 89687,
         label: 'Home'
     },
     {
@@ -263,15 +263,15 @@ const houseTypes = [
         label: 'Home'
     },
     {
-        id: 345,
+        id: 46,
         label: 'Office'
     },
     {
-        id: 394,
+        id: 90809,
         label: 'Apartment'
     },
     {
-        id: 985,
+        id: 988978,
         label: 'Home'
     },
 ]
@@ -286,7 +286,7 @@ const properties = [
     },
 
     {
-        id: 9834834,
+        id: 76675,
         image: 'https://5.imimg.com/data5/SELLER/Default/2020/11/VA/PT/WD/63934041/whatsapp-image-2020-11-27-at-15-37-27-2--500x500.jpeg',
         title: 'Kohinoor Park',
         location: 'Dadar E, Mumbai',

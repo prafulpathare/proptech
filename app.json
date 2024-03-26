@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "proptech",
-    "slug": "news",
+    "slug": "proptech",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -21,10 +21,17 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.prafulpathare.proptech"
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "4174e926-74a6-401b-90ea-68c5680b2f9e"
+      }
+    },
+    "owner": "prafulpathare"
   }
 }

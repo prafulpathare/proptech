@@ -6,8 +6,11 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { useFonts } from 'expo-font';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Home from './components/Home';
-import Search from './components/Search';
-import News from './components/News';
+import Room from './components/Room';
+import Temp from './components/Temp';
+import * as SplashScreen from 'expo-splash-screen';
+
+SplashScreen.preventAutoHideAsync();
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -112,7 +115,7 @@ function MyTabs() {
               );
             },
           }}
-          name="Search" component={Search} />
+          name="Temp" component={Temp} />
 
 
         <Tab.Screen
@@ -140,7 +143,8 @@ function MyTabs() {
               );
             },
           }}
-          name="Favorites" component={Search} />
+          name="Temp2" component={Temp} />
+
 
         <Tab.Screen
           options={{
@@ -167,7 +171,8 @@ function MyTabs() {
               );
             },
           }}
-          name="Message" component={Search} />
+          name="Temp3" component={Temp} />
+
 
 
       </Tab.Navigator>
@@ -193,8 +198,8 @@ export default function App() {
           options={{ headerShown: false }}
         />
         <Stack.Screen
-          name="News"
-          component={News}
+          name="Room"
+          component={Room}
           options={{ headerShown: false }}
         />
       </Stack.Navigator>
