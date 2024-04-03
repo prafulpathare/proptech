@@ -115,7 +115,7 @@ function MyTabs() {
               );
             },
           }}
-          name="Temp" component={Temp} />
+          name="Temp" component={Home} />
 
 
         <Tab.Screen
@@ -143,7 +143,7 @@ function MyTabs() {
               );
             },
           }}
-          name="Temp2" component={Temp} />
+          name="Temp2" component={Home} />
 
 
         <Tab.Screen
@@ -171,7 +171,7 @@ function MyTabs() {
               );
             },
           }}
-          name="Temp3" component={Temp} />
+          name="Temp3" component={Home} />
 
 
 

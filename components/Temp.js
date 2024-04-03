@@ -11,7 +11,7 @@ export default function Temp({navigation, route}) {
     const [room, setRoom] = useState(route.params);
 
     useEffect(() => {
-
+        console.log('imk', room);
     }, [])
 
     const shuffle = (arr) => {
